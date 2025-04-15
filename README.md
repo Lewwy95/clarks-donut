@@ -11,7 +11,7 @@ clarks-donut is a custom mod manager for R.E.P.O.
 Place the 'clarks-donut' folder in your R.E.P.O game installation directory then run the following file:
 
 ```
-clarks-donut.bat
+install.bat
 ```
 
 ## Contributions

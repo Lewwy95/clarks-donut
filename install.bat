@@ -76,7 +76,7 @@ echo Installing mods...
 if not exist "%~dp0..\BepInEx" (
     :: Create the core folders and move the files
     powershell -c "Expand-Archive '%~dp0\bin\mods\BepInEx.zip' -Force '%~dp0\bin\temp'"
-    xcopy /s /y /i "%~dp0\bin\temp\BepInEx\BepInEx\*" "%~dp0..\BepInEx"
+    xcopy /s /y /i "%~dp0\bin\temp\*" "%~dp0..\"
 
     :: Copy mods and dependencies over
     xcopy /s /y /i "%~dp0\bin\mods\*.dll" "%~dp0..\BepInEx\plugins"
@@ -108,6 +108,7 @@ cls
 if exist "%~dp0\modlist.txt" del /s /q "%~dp0\modlist.txt"
 echo Creating mods text file...
 echo - FOVUpdate>> modlist.txt
+echo - LateJoin>> modlist.txt
 echo - MorePlayers>> modlist.txt
 cls
 
